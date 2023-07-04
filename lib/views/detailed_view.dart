@@ -26,25 +26,20 @@ class DetailedView extends StatelessWidget {
                 Positioned(
                     bottom: -15,
                     right: 0,
-                    child: Hero(
-                        tag: '${data.id}-button',
-                        child: IconButton(
-                          iconSize: 50.0,
-                          onPressed: () {
-                            debugPrint('Id: is ${data.id}');
-                          },
-                          icon: const Icon(Icons.add_box),
-                          color: Colors.amber,
-                        ))),
+                    child: IconButton(
+                      iconSize: 50.0,
+                      onPressed: () {
+                        debugPrint('Id: is ${data.id}');
+                      },
+                      icon: const Icon(Icons.add_box),
+                      color: Colors.amber,
+                    )),
               ],
             ),
-            Hero(
-              tag: '${data.id}-title',
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Material(child: Text(data.description)),
-                ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(data.description),
               ),
             )
           ],

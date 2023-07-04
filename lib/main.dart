@@ -66,44 +66,35 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           Expanded(
-                            child: Hero(
-                              tag: '${spaces[index].id}-title',
-                              child: SizedBox(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 20.0, right: 20.0),
-                                  child: Center(
-                                      child: Material(
-                                    color: Colors.grey,
+                            child: SizedBox(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 20.0, right: 20.0),
+                                child: Center(
                                     child: Text(
-                                      spaces[index].description,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  )),
-                                ),
+                                  spaces[index].description,
+                                  overflow: TextOverflow.ellipsis,
+                                )),
                               ),
                             ),
                           ),
                         ],
                       ),
                       Positioned(
-                          child: Hero(
-                        tag: '${spaces[index].id}-button',
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: IconButton(
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        DetailedView(data: spaces[index])),
-                              );
-                            },
-                            icon: const Icon(
-                              size: 50.0,
-                              Icons.add_box,
-                              color: Colors.amber,
-                            ),
+                          child: Align(
+                        alignment: Alignment.centerRight,
+                        child: IconButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      DetailedView(data: spaces[index])),
+                            );
+                          },
+                          icon: const Icon(
+                            size: 50.0,
+                            Icons.add_box,
+                            color: Colors.amber,
                           ),
                         ),
                       )),
